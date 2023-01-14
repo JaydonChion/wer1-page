@@ -21,6 +21,9 @@ $(function() {
             $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec",
                 type: "POST",
+                xhrFields: {
+                    withCredentials: true
+                },
                 data: JSON.stringify({
                     name: name,
                     company: company,
@@ -28,6 +31,7 @@ $(function() {
                     email: email,
                     message: message
                 }),
+                dataType: 'json',
                 crossDomain: true,
                 headers: {
                     "accept": "application/json",
