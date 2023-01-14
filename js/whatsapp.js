@@ -6,5 +6,7 @@ $('#whatsappDiv').floatingWhatsApp({
     showPopup: true,
     showOnIE: false,
     headerTitle: 'Chat with us',
+    position: 'right',
+    size: '10rem',
 });
 });
