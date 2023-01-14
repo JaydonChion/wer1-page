@@ -172,7 +172,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: #f7f7f7;
 }
 
 .navbar-default .navbar-brand {
@@ -278,8 +278,15 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .header-logo {
-    height: 5rem;
-    margin-top: -1.5rem;
+    height: 4rem;
+    margin-top: -2.3rem;
+}
+
+.company-name {
+    font-size: 4rem;
+    font-family: "Helvetica Neue";
+    margin-left: -0.2rem;
+    padding: 0;
 }
 
 header {
