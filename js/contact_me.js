@@ -26,35 +26,37 @@ $(function() {
                 message: message
             };
             fetch("https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec", {
-                method: "POST",
-                headers: {'Content-Type': 'application/json'}, 
-                body: JSON.stringify(data)
-                }).then(res => {
-                    if (!res.ok) {
-                        // Fail message
-                        $('#success').html("<div class='alert alert-danger'>");
-                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                        $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
-                        $('#success > .alert-danger').append('</div>');
-                        //clear all fields
-                        $('#contactForm').trigger("reset");
-                    }
-                    else{
-                        // Success message
-                        $('#success').html("<div class='alert alert-success'>");
-                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                        $('#success > .alert-success')
-                            .append("<strong>Your message has been sent. </strong>");
-                        $('#success > .alert-success')
-                            .append('</div>');
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8',
+                }
+            }).then(res => {
+                if (!res.ok) {
+                    // Fail message
+                    $('#success').html("<div class='alert alert-danger'>");
+                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append('</div>');
+                    //clear all fields
+                    $('#contactForm').trigger("reset");
+                }
+                else{
+                    // Success message
+                    $('#success').html("<div class='alert alert-success'>");
+                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-success')
+                        .append("<strong>Your message has been sent. </strong>");
+                    $('#success > .alert-success')
+                        .append('</div>');
 
-                        //clear all fields
-                        $('#contactForm').trigger("reset");
-                    }
+                    //clear all fields
+                    $('#contactForm').trigger("reset");
+                }
 
-                });
+            });
         },
         filter: function() {
             return $(this).is(":visible");
@@ -72,4 +74,3 @@ $(function() {
 $('#name').focus(function() {
     $('#success').html('');
 });
-
