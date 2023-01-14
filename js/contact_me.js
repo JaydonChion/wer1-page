@@ -28,6 +28,11 @@ $(function() {
                     email: email,
                     message: message
                 }),
+                crossDomain: true,
+                headers: {
+                    "accept": "application/json",
+                    "Access-Control-Allow-Origin":"*"
+                },
                 contentType: "application/json; charset=utf-8",
                 cache: false,
                 success: function() {
