@@ -29,7 +29,6 @@ $(function() {
                     message: message
                 }),
                 contentType: "application/json; charset=utf-8",
-                traditional: true,
                 cache: false,
                 success: function() {
                     // Success message
