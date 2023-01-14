@@ -1,3 +1,4 @@
 {% include css/bootstrap.min.css %}
 {% include css/agency.css %}
+{% include css/floating-wpp.min.css %}
 {{ content }}

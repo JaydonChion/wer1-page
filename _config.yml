@@ -47,9 +47,9 @@ people:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: facebook
-    url:
+    url: https://www.facebook.com/profile.php?id=100089296517849
   - title: whatsapp
-    url: https://wa.me/6565144693?text=Hi%20Wer1,%20I%20would%20like%20to%20know%20more%20about%20the%services.
+    url: https://wa.me/6565144693?text=Hi%20Wer1,%20I%20would%20like%20to%20know%20more%20about%20the%20services.
   - title: linkedin
     url: https://www.linkedin.com/company/wer1sg/
 
