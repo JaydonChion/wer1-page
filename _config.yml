@@ -6,6 +6,8 @@ title: wer1
 email: your-email@domain.com
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
+subtitle: Accounting • Tax • Grant
+tagline: Leave The Mess to Expert
 
 # Team names, titles and social links
 people:
@@ -44,16 +46,12 @@ people:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
   - title: facebook
     url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
+  - title: whatsapp
+    url: https://wa.me/6565144693?text=Hi%20Wer1,%20I%20would%20like%20to%20know%20more
+  - title: linkedin
     url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
 
 # Postal address (add as many lines as necessary)
 address:
