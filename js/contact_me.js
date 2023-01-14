@@ -25,7 +25,7 @@ $(function() {
                 email: email,
                 message: message
             };
-            fetch("https://131d6650-4b2e-42af-84aa-abafb247e4f1.mock.pstmn.io/contact", {
+            fetch("https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec", {
                 method: 'POST',
                 body: JSON.stringify(data),
                 redirect: "follow",

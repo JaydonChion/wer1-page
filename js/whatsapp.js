@@ -8,6 +8,6 @@ $('#whatsappDiv').floatingWhatsApp({
     headerTitle: 'Chat with us',
     position: 'right',
     size: '6rem',
-    autoOpenTimeout: '5000',
+    autoOpenTimeout: '30000',
 });
 });
