@@ -210,7 +210,7 @@ fieldset[disabled] .btn-xl.active {
     font-family: {{ site.data.template.font.primary }};
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: #000;
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
     transition: all ease .35s;
@@ -235,6 +235,18 @@ fieldset[disabled] .btn-xl.active {
 }
 
 @media(min-width:768px) {
+
+    .navbar-default .nav li a {
+        text-transform: uppercase;
+        font-family: {{ site.data.template.font.primary }};
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #fff;
+        -webkit-transition: all ease .35s;
+        -moz-transition: all ease .35s;
+        transition: all ease .35s;
+    }
+
     .navbar-default {
         padding: 25px 0;
         border: 0;

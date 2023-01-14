@@ -10,6 +10,7 @@ $(function() {
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
+            var company = $("input#companyName").val();
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
@@ -18,10 +19,11 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec",
                 type: "POST",
                 data: {
                     name: name,
+                    company: company,
                     phone: phone,
                     email: email,
                     message: message
