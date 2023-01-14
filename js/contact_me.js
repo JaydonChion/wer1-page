@@ -18,29 +18,17 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec",
-                type: "POST",
-                xhrFields: {
-                    withCredentials: true
-                },
-                data: JSON.stringify({
+            async function postData() {
+                let data = {
                     name: name,
                     company: company,
                     phone: phone,
                     email: email,
                     message: message
-                }),
-                dataType: 'json',
-                crossDomain: true,
-                headers: {
-                    "accept": "application/json",
-                    "Access-Control-Allow-Origin":"*"
-                },
-                contentType: "application/json; charset=utf-8",
-                cache: false,
-                success: function() {
-                    // Success message
+                };
+              
+                try {
+                  const response = await axios.post("https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec", data);
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -48,11 +36,10 @@ $(function() {
                         .append("<strong>Your message has been sent. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
-
+            
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                },
-                error: function() {
+                } catch (error) {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -61,8 +48,10 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                },
-            })
+                }
+              }
+              
+              await postData();
         },
         filter: function() {
             return $(this).is(":visible");
