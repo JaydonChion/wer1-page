@@ -18,6 +18,13 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            let data = {
+                name: name,
+                company: company,
+                phone: phone,
+                email: email,
+                message: message
+            };
             fetch("https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec", {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'}, 
@@ -66,11 +73,3 @@ $('#name').focus(function() {
     $('#success').html('');
 });
 
-
-let data = {
-    name: name,
-    company: company,
-    phone: phone,
-    email: email,
-    message: message
-};
