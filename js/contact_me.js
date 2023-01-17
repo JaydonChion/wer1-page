@@ -42,6 +42,7 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
+                    window.gtag('event', 'form_submission_fail');
                 }
                 else{
                     // Success message
@@ -55,6 +56,7 @@ $(function() {
 
                     //clear all fields
                     $('#contactForm').trigger("reset");
+                    window.gtag('event', 'form_submission_success');
                 }
 
             });
