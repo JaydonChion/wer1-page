@@ -1,6 +1,9 @@
 url: https://wer1.sg
 baseurl: /
 
+plugins:
+  - jekyll-seo-tag
+
 # Site settings
 title: wer1
 email: dana@wer1.sg
