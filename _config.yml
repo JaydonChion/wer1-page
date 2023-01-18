@@ -1,7 +1,7 @@
 url: https://wer1.sg
 baseurl: /
 
-plugins:
+gems:
   - jekyll-seo-tag
   - jekyll-sitemap
 
