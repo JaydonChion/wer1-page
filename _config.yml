@@ -3,6 +3,7 @@ baseurl: /
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Site settings
 title: wer1
