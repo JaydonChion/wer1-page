@@ -5,7 +5,6 @@ gem 'nokogiri'
 gem 'rack', '~> 2.2.4'
 gem 'rspec'
 gem 'jekyll', github: 'jekyll/jekyll', ref: 'refs/pull/9248/head'
-gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
 
 
