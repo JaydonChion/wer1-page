@@ -7,8 +7,8 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            // $("#contactButton").html('Sending...');
-            // $("#contactButton").prop('disabled', true);
+            $("#contactButton").html('Sending...');
+            $("#contactButton").prop('disabled', true);
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
@@ -68,8 +68,8 @@ $(function() {
                     window.gtag('event', 'form_submission_success');
                 }
 
-                // $("#contactButton").html('Send Message');
-                // $("#contactButton").prop('disabled', false);
+                $("#contactButton").html('Send Message');
+                $("#contactButton").prop('disabled', false);
 
             });
         },
