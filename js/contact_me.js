@@ -16,6 +16,9 @@ $(function() {
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
             var promocode = $("input#promocode").val();
+            if (promocode === null) {
+                promocode = "";
+            }
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
@@ -37,8 +40,6 @@ $(function() {
                     'Content-Type': 'text/plain;charset=utf-8',
                 }
             }).then(res => {
-                $("#contactButton").html('Send Message');
-                $("#contactButton").prop('disabled', false);
                 if (!res.ok) {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
@@ -64,6 +65,9 @@ $(function() {
                     $('#contactForm').trigger("reset");
                     window.gtag('event', 'form_submission_success');
                 }
+
+                $("#contactButton").html('Send Message');
+                $("#contactButton").prop('disabled', false);
 
             });
         },
