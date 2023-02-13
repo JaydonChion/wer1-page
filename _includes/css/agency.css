@@ -901,17 +901,3 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
-
-.loader {
-    border: 13% solid #f3f3f3; /* Light grey */
-    border-top: 13% solid #{{ site.data.template.color.primary }};
-    border-radius: 50%;
-    width: auto;
-    height: 100%;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
