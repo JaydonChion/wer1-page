@@ -16,8 +16,11 @@ $(function() {
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
             var promocode = $("input#promocode").val();
-            console.log('printing promocode');
-            console.log(promocode);
+            
+            if (company === null) {
+                company = "";
+            }
+
             if (promocode === null) {
                 promocode = "";
             }
