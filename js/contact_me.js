@@ -38,7 +38,6 @@ $(function() {
                 promocode: promocode
             };
             try {
-                console.log(data);
                 fetch("https://script.google.com/macros/s/AKfycbzObKbBCqqNz7QF7zZZXIY-yuBETa_Z4jtJMIbm43Js0_3Jjf4ofH39p1ToMqI9C1Ck/exec", {
                     method: 'POST',
                     body: JSON.stringify(data),
@@ -55,7 +54,7 @@ $(function() {
                         $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
                         $('#success > .alert-danger').append('</div>');
                         //clear all fields
-                        $('#contactForm').trigger("reset");
+                        //$('#contactForm').trigger("reset");
                         window.gtag('event', 'form_submission_fail');
                     }
                     else{
@@ -73,16 +72,13 @@ $(function() {
                         window.gtag('event', 'form_submission_success');
                     }
     
-                    $("#contactButton").html('Send Message');
-                    $("#contactButton").prop('disabled', false);
+                    //$("#contactButton").html('Send Message');
+                    //$("#contactButton").prop('disabled', false);
     
-                }).catch((error) => {
-                    console.log(error)
-                    $("#contactButton").html('Send Message');
-                    $("#contactButton").prop('disabled', false);
-                });;
+                });
             } catch (error) {
                 console.log(error);
+            } finally {
                 $('#contactForm').trigger("reset");
                 $("#contactButton").html('Send Message');
                 $("#contactButton").prop('disabled', false);
