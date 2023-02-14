@@ -42,6 +42,7 @@ $(function() {
                     method: 'POST',
                     body: JSON.stringify(data),
                     redirect: "follow",
+                    mode: "no-cors",
                     headers: {
                         'Content-Type': 'text/plain;charset=utf-8',
                     }
@@ -82,6 +83,7 @@ $(function() {
                 });;
             } catch (error) {
                 console.log(error);
+                $('#contactForm').trigger("reset");
                 $("#contactButton").html('Send Message');
                 $("#contactButton").prop('disabled', false);
             }
