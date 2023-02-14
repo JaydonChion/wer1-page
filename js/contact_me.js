@@ -68,18 +68,24 @@ $(function() {
                             .append('</div>');
     
                         //clear all fields
-                        $('#contactForm').trigger("reset");
+                        //$('#contactForm').trigger("reset");
                         window.gtag('event', 'form_submission_success');
                     }
     
-                    //$("#contactButton").html('Send Message');
-                    //$("#contactButton").prop('disabled', false);
+                    // $("#contactButton").html('Send Message');
+                    // $("#contactButton").prop('disabled', false);
     
-                });
+                }).catch((error) => {
+                    window.gtag('event', 'form_submission_error');
+                }).finally(
+                    () => {
+                        $('#contactForm').trigger("reset");
+                        $("#contactButton").html('Send Message');
+                        $("#contactButton").prop('disabled', false);
+                    }
+                );
             } catch (error) {
                 window.gtag('event', 'form_submission_error');
-                console.log(error);
-            } finally {
                 $('#contactForm').trigger("reset");
                 $("#contactButton").html('Send Message');
                 $("#contactButton").prop('disabled', false);
