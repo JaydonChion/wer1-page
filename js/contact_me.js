@@ -74,7 +74,11 @@ $(function() {
                 $("#contactButton").html('Send Message');
                 $("#contactButton").prop('disabled', false);
 
-            });
+            }).catch((error) => {
+                console.log(error)
+                $("#contactButton").html('Send Message');
+                $("#contactButton").prop('disabled', false);
+            });;
         },
         filter: function() {
             return $(this).is(":visible");
