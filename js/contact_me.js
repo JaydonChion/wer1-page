@@ -77,6 +77,7 @@ $(function() {
     
                 });
             } catch (error) {
+                window.gtag('event', 'form_submission_error');
                 console.log(error);
             } finally {
                 $('#contactForm').trigger("reset");
