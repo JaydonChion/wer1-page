@@ -3,8 +3,10 @@ $(function () {
   const param = urlParams.get('promo');
   if(param !== null && param.length > 0){
        $("#promoApplied").text("Promo code <".concat(param ,"> is applied successfully"))
+       $("#formSub").hide();
        $("#promoApplied").show();
        $("#promotandc").show();
+       $("#promoInstruction").show();
        $("input#promocode").val(param);
        $("input#promocode").attr('readonly', true);
     
