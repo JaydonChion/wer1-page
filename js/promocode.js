@@ -7,5 +7,10 @@ $(function () {
        $("#promotandc").show();
        $("input#promocode").val(param);
        $("input#promocode").attr('readonly', true);
+    
+      $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+      },1000);
+    
   }
 });
