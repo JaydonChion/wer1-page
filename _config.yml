@@ -3,6 +3,7 @@ baseurl: /
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Site settings
 title: wer1
